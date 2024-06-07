@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!--Bubble Font-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Dongle:wght@300&family=Mouse+Memoirs&family=Nanum+Gothic+Coding:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!--Fuente botones-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/login/login.css">
+
+</head>
+
+<body>
+
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+
+            <form action="" id="registroForm">
+
+                <h1>Crear Cuenta</h1>
+
+                <input type="text" name="nombre" placeholder="Nombre" required>
+
+                <input type="text" name="apellido" placeholder="Apellido" required>
+
+                <input type="email" name="correo" placeholder="Correo" required>
+
+                <input type="text" name="usuario" placeholder="Usuario" required>
+
+                <input type="password" name="password" placeholder="Contraseña" required>
+
+                <button type="submit">Registrarse</button>
+
+            </form>
+        </div>
+
+
+        <div class="form-container sign-in">
+
+            <form action="" id="loginForm" onsubmit="event.preventDefault(); iniciarSesion();">
+
+                <h1>Iniciar Sesión</h1>
+
+                <input type="text" id="usuario" placeholder="Usuario" required>
+
+                <input type="password" id="password" placeholder="Contraseña" required>
+
+                <button type="submit">Iniciar sesión</button>
+
+            </form>
+        </div>
+
+        <div class="toggle-container">
+            <div class="toggle">
+
+                <div class="toggle-panel toggle-left">
+                    <h1>Bienvenido de nuevo</h1>
+
+                    <button class="hidden" id="login">Iniciar sesión</button>
+                </div>
+
+                <div class="toggle-panel toggle-right">
+                    <h1>Hola, Amig@!</h1>
+                    <p>Si eres nuevo usuario registrate aquí</p>
+                    <button class="hidden" id="register">Registrarse</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!--conexion formulario registro a la bd-->
+    <!--<script>
+        document.getElementById('registroForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const data = {
+                nombre: event.target.nombre.value,
+                apellido: event.target.apellido.value,
+                correo: event.target.correo.value,
+                usuario: event.target.usuario.value,
+                password: event.target.password.value
+            };
+
+            fetch('http://localhost:8080/api/registro/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                /*.then(response => response.text())
+                .then(data => {
+                    alert("registro exitoso");
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });*/
+
+                .then(response => response.text())
+                .then(data => {
+
+                    alert('Registro exitoso :)');
+                    window.location.reload(); // Recargar la página actual
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+
+            function validarCorreo(correo) {
+                // Expresión regular para validar el correo electrónico
+                const regex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{3}$/;
+
+                // Testea si el correo cumple con la expresión regular
+                return regex.test(correo);
+            }
+        });
+
+
+    </script>-->
+
+    <!--conexion form registro con validacion de correo-->
+    <!--<script>
+        function validarCorreo(correo) {
+            // Expresión regular para validar el formato del correo
+            const regex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{3}$/;
+            return regex.test(correo);
+        }
+
+        document.getElementById('registroForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const data = {
+                nombre: event.target.nombre.value,
+                apellido: event.target.apellido.value,
+                correo: event.target.correo.value,
+                usuario: event.target.usuario.value,
+                password: event.target.password.value
+            };
+
+            // Validar el correo electrónico
+            if (!validarCorreo(data.correo)) {
+                alert("Por favor, ingrese un correo electrónico válido.");
+                return; // Detener la ejecución si el correo no es válido
+            }
+
+            fetch('http://localhost:8080/api/registro/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.text())
+                .then(data => {
+                    alert('Registro exitoso :)');
+                    window.location.reload(); // Recargar la página actual
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>-->
+
+
+
+
+    <!---BOTONES MODO CLASICO-->
+
+
+    <div class="tooltip">
+        <button class="btn-salir">
+            <a href="/index.html">
+                <img src="/tools/Imgbotones/cerrarSesion2.png" alt="" class="img-salir">
+            </a></button>
+        <span class="tooltiptext">Abandonar el juego</span>
+    </div>
+
+    <script src="/login/login.js"></script>
+
+</body>
+
+</html>

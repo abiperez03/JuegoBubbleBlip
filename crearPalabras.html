@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./crearPalabras.css">
+
+    <!--Bubble Font-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Dongle:wght@300&family=Mouse+Memoirs&family=Nanum+Gothic+Coding:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!--Fuente botones-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+
+    <!--Fuente BIENVENIDO A-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <title>Crear grupos de palabras</title>
+
+    <link rel="icon" href="/tools/icons/party.ico" type="image/x-icon">
+
+
+</head>
+
+<body>
+
+    <!-- VENTANA EMERGENTE -->
+    <div id="openModal" class="modalDialog">
+        <div>
+            <h2 class="wave">ATENCIÓN</h2>
+            <br>
+            <p>Es importante que le asignes un nombre a tu grupo de palabras para cuando quieras volver a usarlo</p>
+            <button id="acceptButton" class="acceptButton">Aceptar</button>
+        </div>
+    </div>
+
+    <!---PARTE SUPERIOR-->
+    <div class="arriba">
+        <div class="titulo">
+            <h1>
+                <span>I</span><span>n</span><span>g</span><span>r</span><span>e</span><span>s</span><span>a</span><span
+                    class="space"> </span>
+                <span>a</span><span>q</span><span>u</span><span>í</span><span class="space"> </span>
+                <span>t</span><span>u</span><span>s</span><span class="space"> </span>
+                <span>p</span><span>a</span><span>l</span><span>a</span><span>b</span><span>r</span><span>a</span><span>s</span>
+            </h1>
+        </div>
+
+        <!---GRUPO DE PALABRAS-->
+        <div class="nombre-gp">
+            <h2>Escribe el nombre de tu grupo de palabras: <br></h2>
+            <input type="text" class="nombre" id="nombre" placeholder="  Nombre del grupo de palabras">
+        </div>
+    </div>
+
+    <!---PARTE CENTRAL-->
+    <div class="palabras">
+        <div class="espanol">
+            <h6 class="text-esp">Español</h6>
+            <input type="text" placeholder="Ingresa tus palabras aquí" class="input-esp" id="input-esp" name="input-esp">
+            <button class="add-esp" onclick="agregarPalabra('input-esp', 'lista-esp')">Agregar</button>
+        </div>
+    
+        <div class="ingles">
+            <h6 class="text-ing">Inglés</h6>
+            <input type="text" placeholder="Write your words here" class="input-ing" id="input-ing" name="input-ing">
+            <button class="add-ing" onclick="agregarPalabra('input-ing', 'lista-ing')">Agregar</button>
+        </div>
+    </div>
+    
+    <!---TABLAS-->
+    <div class="tablas">
+        <div class="tabla-esp tabla-contenedor">
+            <table id="lista-esp">
+                <thead>
+                    <tr>
+                        <th>Palabras en español</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="tabla-ing tabla-contenedor">
+            <table id="lista-ing">
+                <thead>
+                    <tr>
+                        <th>Palabras en inglés</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    
+    
+
+    <!---PARTE INFERIOR-->
+
+    <div class="botones">
+
+        <div class="boton-atras">
+            <button class="atras" id="btnatras">
+                <a href="/palabras/indexpalabras.html">
+                    <img src="/tools/Imgbotones/flecha-izquierda.png" alt="" class="img-salir">
+                </a>
+            </button>
+        </div>
+
+        <div class="boton-play">
+            <button type="submit" class="play" id="playButton">
+
+            </button>
+        </div>
+
+    </div>
+
+    <div class="sugerencia">
+        <h4>¿Prefieres usar tu grupo palabras? <br><a href="/palabras/GrupoPalabra/GrupoPalabras.html">Haz clic aquí</a></h4>
+    </div>
+
+
+    <!--SCRIPT VENTANA EMERGENTE -->
+    <script src="./ventana.js"></script>
+
+    <script src="./consultasCrearPal.js"></script> <!-- Incluyendo el archivo JS externo -->
+
+    <script src="validaciones.js"></script>
+
+</body>
+
+</html>

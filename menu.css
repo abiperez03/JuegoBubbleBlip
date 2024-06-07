@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-image: url(/tools/backgroundimages/menu.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+/*AJSUTES DE TAMAÑO DE PANTALLA*/
+
+/* Para pantallas de 600px o menos */
+@media (max-width: 600px) {
+    #main {
+      width: 100%; /* El contenido ocupa todo el ancho */
+    }
+    #sidebar {
+      display: none; /* Ocultar la barra lateral en pantallas pequeñas */
+    }
+  }
+  
+  /* Para pantallas de 600px a 900px */
+  @media (min-width: 600px) and (max-width: 900px) {
+    #main {
+      width: 70%; /* El contenido ocupa el 70% del ancho */
+    }
+    #sidebar {
+      display: block; /* Mostrar la barra lateral en pantallas medianas */
+    }
+  }
+  
+  /* Para pantallas de 900px o más */
+  @media (min-width: 900px) {
+    #main {
+      width: 60%; /* El contenido ocupa el 60% del ancho */
+    }
+    #sidebar {
+      width: 30%; /* La barra lateral ocupa el 30% del ancho */
+    }
+  }
+
+
+/*NOMBRE JUEGO*/
+h1 {
+    display: flex;
+    position: absolute;
+    margin-left: 20vh;
+    text-align: center;
+    font-size: 16vh;
+    font-family: "Cherry Bomb One", system-ui;
+    color: rgb(255, 255, 255);
+    text-shadow: 2vh 1.5vh 2vh #5991EF;
+    display: flex;
+    margin-top: 1vh;
+}
+
+/*AJUSTES DE LETRA*/
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: wave 0.5s forwards;
+}
+
+/*ANIMACION*/
+
+@keyframes wave {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes reset {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.letter-reset {
+    animation: reset 0s forwards 4s;
+}
+
+
+/* Estilo para el contenedor de botones */
+.botones_menu {
+    display: flex; /* Utiliza flexbox */
+    flex-direction: column; /* Coloca los botones uno encima del otro */
+    align-items: center; /* Centra los botones horizontalmente */
+    position: relative;
+    margin-left: 7vh;
+    margin-top: 30vh;
+}
+
+/* Estilo para los botones */
+.btn {
+    background: linear-gradient(to bottom, #ACCFF2 0%, #B294F1 100%);
+    border: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 5vh;
+    margin: 1vh 50vh;
+    cursor: pointer;
+    border-radius: 50vh;
+    transition: background-color 0.3s ease;
+    width: 40vh;
+    height: 10vh;
+}
+
+/* Efecto hover */
+.btn:hover {
+    background: linear-gradient(to bottom, #B294F1 0%, #ACCFF2 100%);
+}
+
+.btn a{
+    color: white;
+    text-decoration: none;
+    font-family: "Handjet", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    
+}
+
+/*boton salir*/
+
+.botones {
+    position: relative;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    margin-bottom: 0.7%; 
+}
+
+.btn-salir {
+    background-color: transparent;
+    border: none;
+}
+
+.img-salir {
+    margin-left: 3vh;
+    height: 15vh;
+    transition: .3s;
+}
+
+
+.btn-salir:hover {
+    transform: scale(1.2);
+}
+
+.tooltip {
+    display: inline-block;
+    margin-top: 10%;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    bottom: 2vh;
+    left: 2vh;
+    margin-bottom: 1.5vh;
+    
+}
+
+.btn-salir {
+    background-color: transparent;
+    border: none;
+
+}
+
+.img-salir {
+    margin-left: 3vh;
+    height: 10vh;
+    transition: .3s;
+}
+
+
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 20vh;
+    background-color: rgb(255, 255, 255);
+    color: #72C8E8;
+    text-align: center;
+    font-size: 2vh;
+    border-radius: 1vh;
+    padding: 1vh 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 105%;
+    /* Ajusta esta propiedad para cambiar la posición del texto */
+    left: 50%;
+    margin-left: -7vh;
+    /* Ajusta para centrar el texto */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -1.5vh;
+    border-width: 1vh;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    transform: scale(1.2);
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+

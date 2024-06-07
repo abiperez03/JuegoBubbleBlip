@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo clásico</title>
+
+    <link rel="icon" href="/tools/icons/party.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="/ModoClasico/ModoClasico.css">
+    <link rel="stylesheet" href="./efectoBurbuja.css">
+
+<!--
+
+        <style>
+        .bubbe {
+            display: none;
+        }
+    </style>
+-->
+
+    <!--Bubble Font-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Dongle:wght@300&family=Mouse+Memoirs&family=Nanum+Gothic+Coding:wght@700&display=swap"
+        rel="stylesheet">
+        
+</head>
+
+<body>
+
+
+ <!--icono barra-->
+
+ <div class="corazon">
+    <img src="/tools/Imgbotones/corazon.png" alt="">
+</div>
+
+<!--barra de progreso-->
+
+<div class="progress">
+    <div class="bar">
+        <div class="progress-value" id="myBar"></div>
+    </div>
+</div>
+
+    <!--icono volumen-->
+
+    <button id="volumen">
+        <img src="/tools/Imgbotones/repeatAudio.png" alt="Subir Volumen">
+    </button>
+
+    <!--burbujas-->
+
+
+
+    <!---BOTONES MODO CLASICO-->
+
+
+    <div class="botones">
+
+        <button class="btn-salir">
+            <a href="/menu/menu.html">
+                <img src="/tools/Imgbotones/flecha-izquierda.png" alt="" class="img-salir">
+            </a>
+        </button>
+
+    </div>
+
+
+
+<!-- VENTANA EMERGENTE -->
+
+<div id="openModal" class="modalDialog">
+    <div>
+        <h2>INSTRUCCIONES DEL JUEGO</h2>
+        <br>
+        <p>Al inicio del juego debes de escuchar cuidadosamente</p>
+        <p>y seleccionar la palabra de acuerdo al audio</p>
+        <button id="acceptButton" class="acceptButton">Aceptar</button>
+    </div>
+</div>
+
+
+<!--  AUDIO PRELOAD PARA CORRER MAS RAPIDO-->
+<audio id="sonidobadBurbuja" src="/tools/Audios/badBubble.mp3" preload="auto"></audio>
+<audio id="SonidoCorrectBubble" src="/tools/Audios/correctBubble.mp3" preload="auto"></audio>
+
+<script src="./efectoBurbuja.js"></script>
+<script src="./ModoClasico.js"></script>
+
+
+
+
+</body>
+
+</html>

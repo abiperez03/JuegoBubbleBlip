@@ -1,0 +1,226 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(/tools/backgroundimages/indexpalabra.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+/*AJSUTES DE TAMAÑO DE PANTALLA*/
+
+/* Para pantallas de 600px o menos */
+@media (max-width: 600px) {
+    #main {
+      width: 100%; /* El contenido ocupa todo el ancho */
+    }
+    #sidebar {
+      display: none; /* Ocultar la barra lateral en pantallas pequeñas */
+    }
+  }
+  
+  /* Para pantallas de 600px a 900px */
+  @media (min-width: 600px) and (max-width: 900px) {
+    #main {
+      width: 70%; /* El contenido ocupa el 70% del ancho */
+    }
+    #sidebar {
+      display: block; /* Mostrar la barra lateral en pantallas medianas */
+    }
+  }
+  
+  /* Para pantallas de 900px o más */
+  @media (min-width: 900px) {
+    #main {
+      width: 60%; /* El contenido ocupa el 60% del ancho */
+    }
+    #sidebar {
+      width: 30%; /* La barra lateral ocupa el 30% del ancho */
+    }
+  }
+
+
+
+
+.texto-titulo {
+    text-align: center;
+    justify-content: center;
+}
+
+.bounce {
+    justify-content: center;
+    font-family: "Cherry Bomb One", system-ui;
+    font-size: 9vh;
+    color: rgb(15, 69, 150);
+    margin-top: 3vh;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+/*botones*/
+
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -35vh;
+}
+
+.btn-CP {
+    /*AJUSTES BOTON*/
+    background-color: white;
+    border: none;
+    border-radius: 50vh;
+    width: 60vh;
+    height: 17vh;
+    margin: 0 11vh;
+    /* Espacio horizontal entre botones */
+
+    /*AJUSTES TEXTO*/
+    text-align: center;
+    text-decoration: none;
+    font-size: 7vh;
+
+    /*ANIMACION*/
+    transition: background-color 0.3s ease;
+}
+
+.btn-GP {
+    /*AJUSTES BOTON*/
+    background-color: white;
+    border: none;
+    border-radius: 50vh;
+    width: 60vh;
+    height: 17vh;
+    margin: 0 11vh;
+    /* Espacio horizontal entre botones */
+
+    /*AJUSTES TEXTO*/
+    text-align: center;
+    text-decoration: none;
+    font-size: 7vh;
+
+    /*ANIMACION*/
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover */
+.btn-CP:hover,
+.btn-GP:hover {
+    background: linear-gradient(to bottom, #B294F1 0%, #ACCFF2 100%);
+    transform: scale(1.1);
+    /* Aumenta el tamaño del botón al 120% */
+}
+
+/*CONFIGURACION LETRAS BOTONES*/
+.btn-CP a {
+    color: black;
+    text-decoration: none;
+    font-family: "Handjet", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.btn-GP a {
+    color: black;
+    text-decoration: none;
+    font-family: "Handjet", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/*boton salir*/
+
+.btn-salir:hover {
+    transform: scale(1.2);
+}
+
+.btn-salir {
+    background-color: transparent;
+    border: none;
+}
+
+.img-salir {
+    margin-left: 5vh;
+    height: 13vh;
+    transition: .3s;
+}
+
+.tooltip {
+    display: inline-block;
+    margin-top: 10%;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    bottom: 2vh;
+    left: 2vh;
+    margin-bottom: 1.5vh;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 20vh;
+    background-color: rgb(255, 255, 255);
+    color: #72C8E8;
+    text-align: center;
+    font-size: 3vh;
+    border-radius: 1vh;
+    padding: 1vh 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 105%;
+    /* Ajusta esta propiedad para cambiar la posición del texto */
+    left: 50%;
+    margin-left: -7vh;
+    /* Ajusta para centrar el texto */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -1.5vh;
+    border-width: 1vh;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    transform: scale(1.2);
+    visibility: visible;
+    opacity: 1;
+}

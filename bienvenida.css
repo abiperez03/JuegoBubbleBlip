@@ -1,0 +1,149 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-image: url(/tools/backgroundimages/bienvenida3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+/*AJSUTES DE TAMAÑO DE PANTALLA*/
+
+/* Para pantallas de 600px o menos */
+@media (max-width: 600px) {
+  #main {
+    width: 100%; /* El contenido ocupa todo el ancho */
+  }
+  #sidebar {
+    display: none; /* Ocultar la barra lateral en pantallas pequeñas */
+  }
+}
+
+/* Para pantallas de 600px a 900px */
+@media (min-width: 600px) and (max-width: 900px) {
+  #main {
+    width: 70%; /* El contenido ocupa el 70% del ancho */
+  }
+  #sidebar {
+    display: block; /* Mostrar la barra lateral en pantallas medianas */
+  }
+}
+
+/* Para pantallas de 900px o más */
+@media (min-width: 900px) {
+  #main {
+    width: 60%; /* El contenido ocupa el 60% del ancho */
+  }
+  #sidebar {
+    width: 30%; /* La barra lateral ocupa el 30% del ancho */
+  }
+}
+
+
+
+
+/*NOMBRE JUEGO*/
+h1 {
+  justify-content: center;
+  text-align: center;
+  font-size: 20vh;
+  font-family: "Cherry Bomb One", system-ui;
+  color: rgb(255, 255, 255);
+  text-shadow: 2vh 1.5vh 2vh #5991EF;
+  display: flex;
+  margin-top: 20vh;
+}
+
+/*AJUSTES DE LETRA*/
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: wave 0.5s forwards;
+}
+
+/*ANIMACION*/
+
+@keyframes wave {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes reset {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+
+.letter-reset {
+  animation: reset 0s forwards 4s;
+}
+
+/*MENSAJE*/
+
+.text-bienvenida{
+  flex-wrap: wrap;
+  color: #fff;
+  text-align: center;
+  font-size: 10vh;
+  margin-top: 4vh;
+  letter-spacing: 2vh;
+  font-family: "Handjet", sans-serif;
+}
+
+/*BOTON*/
+
+.btn-com{
+  display: flex;
+  align-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-right: 10%;
+}
+
+/*AJUSTES DIV BOTON*/
+
+.boton-bienvenida{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.img{
+  height: 15vh;
+}
+
+img {
+  position: absolute;
+  animation: moveUpDown 1s infinite alternate; /* Alterna la animación hacia arriba y hacia abajo */
+}
+
+@keyframes moveUpDown {
+  0% {
+    bottom: 5vh;
+  }
+  100% {
+    bottom: 15vh; /* Cambia esta propiedad según el desplazamiento que desees */
+  }
+}

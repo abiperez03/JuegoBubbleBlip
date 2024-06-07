@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const text = "BUBBLE-BLIP";
+    const text = "CONFIGURACIÓN";
     const container = document.getElementById("animated-text");
 
     function animateText() {
@@ -16,5 +16,3 @@ document.addEventListener('DOMContentLoaded', function () {
     animateText();
     setInterval(animateText, 4000); // Reinicia la animación cada 4 segundos
 });
-
-

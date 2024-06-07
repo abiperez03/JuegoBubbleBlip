@@ -1,0 +1,259 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(/tools/backgroundimages/menu.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/*VENTANA EMERGENTE(MODAL)   inicio de aplicacion*/
+
+.modalDialog {
+    position: fixed;
+    font-family: "Cherry Bomb One", system-ui;
+    font-size: 3vh;
+    letter-spacing: .2vh;
+    color: #fff;
+    text-align: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+@keyframes wave {
+    0%, 40%, 100% { transform: translateY(0); }
+    20% { transform: translateY(-10px); }
+  }
+  
+  .wave {
+    display: inline-block;
+    animation: wave 1.5s infinite;
+  }
+
+.modalDialog.open {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    width: 60vh;
+    height: 45vh;
+    position: relative;
+    margin: 25vh auto;
+    border-radius: 5vh;
+    background: #fff;
+    background: -moz-linear-gradient(#cbe8f3, #26c7cd);
+    background: -webkit-linear-gradient(#cbe8f3, #26c7cd);
+    background: -o-linear-gradient(#cbe8f3, #26c7cd);
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+}
+
+.acceptButton {
+    display: block;
+    margin: 2vh auto 0; /* añade un margen superior */
+    padding: 1vh 2vh;
+    border: none;
+    border-radius: 1vh;
+    background-color: #0588b8a4;
+    color: white;
+    font-family: "Cherry Bomb One", system-ui;
+    font-size: 3vh;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.acceptButton:hover {
+    background-color: #30b5d6;
+}
+
+
+/*AJSUTES DE TAMAÑO DE PANTALLA*/
+
+/* Para pantallas de 600px o menos */
+@media (max-width: 600px) {
+    #main {
+      width: 100%; /* El contenido ocupa todo el ancho */
+    }
+    #sidebar {
+      display: none; /* Ocultar la barra lateral en pantallas pequeñas */
+    }
+  }
+  
+  /* Para pantallas de 600px a 900px */
+  @media (min-width: 600px) and (max-width: 900px) {
+    #main {
+      width: 70%; /* El contenido ocupa el 70% del ancho */
+    }
+    #sidebar {
+      display: block; /* Mostrar la barra lateral en pantallas medianas */
+    }
+  }
+  
+  /* Para pantallas de 900px o más */
+  @media (min-width: 900px) {
+    #main {
+      width: 60%; /* El contenido ocupa el 60% del ancho */
+    }
+    #sidebar {
+      width: 30%; /* La barra lateral ocupa el 30% del ancho */
+    }
+  }
+
+
+/*NOMBRE JUEGO*/
+h1 {
+    text-align: center;
+    font-size: 15vh;
+    font-family: "Cherry Bomb One", system-ui;
+    color: rgb(255, 255, 255);
+    text-shadow: 10px 10px 10px #5991EF;
+    display: flex;
+    margin-top: 2vh;
+    letter-spacing: 4vh;
+    align-content: center;
+}
+
+/*AJUSTES DE LETRA*/
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: wave 0.5s forwards;
+}
+
+.titulo{
+    margin-left: -7vh;
+}
+
+/*ANIMACION*/
+
+@keyframes wave {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes reset {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.letter-reset {
+    animation: reset 0s forwards 4s;
+}
+
+
+/*BOTON AYUDA*/
+.Ayuda {
+    position: relative;
+    cursor: pointer;
+    position: absolute;
+    margin-right: -150vh;
+}
+
+.btn-ayuda {
+    background-color: transparent;
+    border: none;
+}
+
+.img-ayuda {
+    margin-top: 3vh;
+    height: 15vh;
+    transition: .3s;
+}
+
+
+.btn-ayuda:hover {
+    transform: scale(1.2);
+}
+
+
+/*INFORMACION*/
+
+.informacion {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 29vh;
+    font-family: "Handjet", sans-serif;
+    font-size: 3.5vh;
+    color: aliceblue;
+    margin-left: -93vh;
+}
+
+.nombres {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nombres ol {
+    margin: 1vh 0;
+}
+
+h3{
+    color: rgb(13, 114, 154);
+    font-family: "Handjet", sans-serif;
+}
+
+
+/*botones*/
+
+.botones {
+    position: relative;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    margin-bottom: 1vh;
+}
+
+.btn-salir {
+    background-color: transparent;
+    border: none;
+}
+
+.img-salir {
+    margin-left: 5vh;
+    height: 16vh;
+    transition: .3s;
+}
+
+
+
+.btn-salir:hover {
+    transform: scale(1.2);
+}
+
+
+
+
+

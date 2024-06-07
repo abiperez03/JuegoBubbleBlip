@@ -1,0 +1,309 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-image: url(/tools/backgroundimages/grupoPalabra.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*AJSUTES DE TAMAÑO DE PANTALLA*/
+
+/* Para pantallas de 600px o menos */
+@media (max-width: 600px) {
+    #main {
+        width: 100%;
+        /* El contenido ocupa todo el ancho */
+    }
+
+    #sidebar {
+        display: none;
+        /* Ocultar la barra lateral en pantallas pequeñas */
+    }
+}
+
+/* Para pantallas de 600px a 900px */
+@media (min-width: 600px) and (max-width: 900px) {
+    #main {
+        width: 70%;
+        /* El contenido ocupa el 70% del ancho */
+    }
+
+    #sidebar {
+        display: block;
+        /* Mostrar la barra lateral en pantallas medianas */
+    }
+}
+
+/* Para pantallas de 900px o más */
+@media (min-width: 900px) {
+    #main {
+        width: 60%;
+        /* El contenido ocupa el 60% del ancho */
+    }
+
+    #sidebar {
+        width: 30%;
+        /* La barra lateral ocupa el 30% del ancho */
+    }
+}
+
+.text-animation {
+    display: flexbox;
+    margin-top: 2vh;
+    margin-left: 30vh;
+    justify-content: center;
+    font-family: "Cherry Bomb One", system-ui;
+    font-size: 9.5vh;
+    color: rgb(15, 69, 150);
+    position: absolute;
+}
+
+.text-animation span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: drop 0.5s forwards;
+}
+
+/* Estilo para el espacio entre las palabras */
+.text-animation .space {
+    margin-right: 2vh;
+    /* Ajusta este valor según la cantidad de espacio que desees */
+}
+
+/* Retraso de la animación para cada letra */
+.text-animation span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.text-animation span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.text-animation span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.text-animation span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.text-animation span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.text-animation span:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.text-animation span:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.text-animation span:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+.text-animation span:nth-child(9) {
+    animation-delay: 0.8s;
+}
+
+.text-animation span:nth-child(10) {
+    animation-delay: 0.9s;
+}
+
+.text-animation span:nth-child(11) {
+    animation-delay: 1s;
+}
+
+.text-animation span:nth-child(12) {
+    animation-delay: 1.1s;
+}
+
+.text-animation span:nth-child(13) {
+    animation-delay: 1.2s;
+}
+
+.text-animation span:nth-child(14) {
+    animation-delay: 1.3s;
+}
+
+.text-animation span:nth-child(15) {
+    animation-delay: 1.4s;
+}
+
+.text-animation span:nth-child(16) {
+    animation-delay: 1.5s;
+}
+
+.text-animation span:nth-child(17) {
+    animation-delay: 1.6s;
+}
+
+.text-animation span:nth-child(18) {
+    animation-delay: 1.7s;
+}
+
+.text-animation span:nth-child(19) {
+    animation-delay: 1.8s;
+}
+
+.text-animation span:nth-child(20) {
+    animation-delay: 1.9s;
+}
+
+.text-animation span:nth-child(21) {
+    animation-delay: 2s;
+}
+
+.text-animation span:nth-child(22) {
+    animation-delay: 2.1s;
+}
+
+.text-animation span:nth-child(23) {
+    animation-delay: 2.2s;
+}
+
+.text-animation span:nth-child(24) {
+    animation-delay: 2.3s;
+}
+
+.text-animation span:nth-child(25) {
+    animation-delay: 2.4s;
+}
+
+/* Definición de la animación */
+@keyframes drop {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para el contenedor de botones */
+.botones_menu {
+
+    align-items: center;
+    /* Centra los botones horizontalmente */
+    margin-top: 10vh;
+    margin-left: 20vh;
+    
+}
+
+/* Estilo para los botones */
+.btn {
+    background: linear-gradient(to bottom, #ACCFF2 0%, #B294F1 100%);
+    border: white;
+    padding: 2vh 5vh;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 4vh;
+    margin: 7vh 10vh;
+    cursor: pointer;
+    border-radius: 50vh;
+    transition: background-color 0.3s ease;
+    width: 30vh;
+
+}
+
+/* Efecto hover */
+.btn:hover {
+    background: linear-gradient(to bottom, #B294F1 0%, #ACCFF2 100%);
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
+    font-family: "Handjet", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+}
+
+
+/*botones*/
+
+.botones {
+    position: relative;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    margin-bottom: 1vh;
+    margin-block-end: 1vh;
+
+}
+
+.btn-salir {
+    background-color: transparent;
+    border: none;
+    margin-right: 1vh;
+    margin-top: 1vh;
+
+}
+
+.img-salir {
+    margin-left: 5vh;
+    margin-block-start: 10vh;
+    height: 15vh;
+    transition: .3s;
+}
+
+
+
+.btn-salir:hover {
+    transform: scale(1.2);
+}
+
+.btn-play:hover {
+    transform: scale(1.2);
+}
+
+.sugerencia {
+    color: #fff;
+    margin-top: 85vh;
+    /* Posiciona el elemento un 40% hacia abajo */
+    margin-left: 10vh;
+    /* Centra horizontalmente */
+    margin-right: auto;
+    font-size: 4vh;
+    font-family: "Handjet", sans-serif;
+    text-align: center;
+    /* Centra el texto horizontalmente */
+    z-index: 999;
+    /* Ajusta este valor según sea necesario */
+}
+
+
+.contenedor-centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-left: 30vh;
+}
+
+.contenedor-botones {
+    width: 60vh;
+    height: 60vh;
+    /* Ajusta la altura según tus necesidades */
+    overflow-y: auto;
+    border: 1vh solid transparent;
+    padding: 5vh;
+    box-shadow: 0 0 10vh transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.btn {
+    margin: 1vh 0;
+}

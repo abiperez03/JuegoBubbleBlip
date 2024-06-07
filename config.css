@@ -1,18 +1,21 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+    margin: 0%;
+    padding: 0%;
     box-sizing: border-box;
     flex-wrap: wrap;
 }
 
 body {
-    display: flex;
+    display: flexbox;
     justify-content: center;
-    min-height: 100vh;
-    background-image: url(/tools/backgroundimages/bienvenida3.png);
+    min-height: 96vh;
+    background-image: url(/tools/backgroundimages/menu.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    
 }
+
 
 /*AJSUTES DE TAMAÑO DE PANTALLA*/
 
@@ -46,26 +49,23 @@ body {
     }
   }
 
-/*TEXTO BIENVENIDA*/
-.text-bienvenida{
-    color: #fff;
-    text-align: center;
-    font-size:10vh;
-    margin-top: 20vh;
-    letter-spacing: 0.5vh;
-    font-family: "Libre Franklin", sans-serif;
-}
+
 
 /*NOMBRE JUEGO*/
 h1 {
+    display: flex;
+    position: relative;
+    margin-left: 30vh;
+    margin-right: 45vh;
+
+    margin-right: 5vh;
     text-align: center;
-    font-size: 22vh;
+    font-size: 13vh;
     font-family: "Cherry Bomb One", system-ui;
     color: rgb(255, 255, 255);
-    text-shadow: 10px 10px 10px #5991EF;
+    text-shadow: 2vh 1.5vh 2vh #5991EF;
     display: flex;
-    margin-top: 0%;
-    justify-content: center;
+    margin-top: 4vh;
 }
 
 /*AJUSTES DE LETRA*/
@@ -103,42 +103,59 @@ h1 {
     animation: reset 0s forwards 4s;
 }
 
-/*BOTON*/
+/*comming*/
 
-.btn-com{
-
-    /*AJUSTES BOTON*/
-    cursor: pointer;
-    background: linear-gradient(to bottom, #ACCFF2 0%, #B294F1 100%);
-    border: white;
-    border-radius: 5vh;
-    transition: background-color 0.3s ease;
-    width: 30vh;
-    height: 10vh;
-
-    /*AJUSTES TEXTO BOTON*/
-    font-size: 8vh;  
-}
-
-/*AJUSTES DIV BOTON*/
-
-.boton-bienvenida{
-    display: flex;
-    justify-content: center;
-    margin-top: 8vh;
-}
-
-/* Efecto hover */
-.btn-com:hover {
-    background: linear-gradient(to bottom, #B294F1 0%, #ACCFF2 100%);
-}
-
-/*AJUSTES TEXTO BOTON*/
-
-.btn-com a{
-    color: white;
-    text-decoration: none;
+.container {
+    position: absolute;
+    align-content: center;
+    margin-left: 15vh;
     font-family: "Handjet", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+    margin-top: 15vh;
+}
+
+.typing-animation {
+    display: inline-block;
+    font-size: 15vh;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid rgb(255, 255, 255); /* Cursor */
+    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+    font-family: "Handjet", sans-serif;
+    margin-right:10%;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: rgb(255, 255, 255); }
+}
+
+
+/*botones*/
+
+.botones {
+    display: flex;
+    position: absolute;
+    z-index: 10; /* Asegúrate de que los botones estén en el nivel superior */
+    cursor: pointer;
+    bottom: 2vh;
+}
+
+.btn-salir {
+    background-color: transparent;
+    border: none;
+}
+
+.img-salir {
+    margin-left: 2vh;
+    height: 15vh;
+    transition: .3s;
+}
+
+.btn-salir:hover {
+    transform: scale(1.2);
 }

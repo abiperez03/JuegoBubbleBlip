@@ -1,0 +1,254 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(/tools/backgroundimages/ModoReto2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/*AJSUTES DE TAMAÑO DE PANTALLA*/
+
+/* Para pantallas de 600px o menos */
+@media (max-width: 600px) {
+    #main {
+      width: 100%; /* El contenido ocupa todo el ancho */
+    }
+    #sidebar {
+      display: none; /* Ocultar la barra lateral en pantallas pequeñas */
+    }
+  }
+  
+  /* Para pantallas de 600px a 900px */
+  @media (min-width: 600px) and (max-width: 900px) {
+    #main {
+      width: 70%; /* El contenido ocupa el 70% del ancho */
+    }
+    #sidebar {
+      display: block; /* Mostrar la barra lateral en pantallas medianas */
+    }
+  }
+  
+  /* Para pantallas de 900px o más */
+  @media (min-width: 900px) {
+    #main {
+      width: 60%; /* El contenido ocupa el 60% del ancho */
+    }
+    #sidebar {
+      width: 30%; /* La barra lateral ocupa el 30% del ancho */
+    }
+  }
+
+/*icono barra*/
+
+/*.corazon {
+    position: absolute;
+    top: 3%;
+    left: 1.5%;
+    height: 90px;
+}*/
+
+
+/*barra de progreso*/
+/*.progress {
+
+    width: 360px;
+    height: 40px;
+    margin-top: 2.5%;
+    margin-left: -48%;
+    border: 6px solid black;
+    border-style: solid;
+
+}
+
+.bar {
+    background: #A492AA;
+    height: 100%;
+
+
+}
+
+.progress-value {
+    width: 50%;
+    height: 100%;
+    background: #74A050;
+}*/
+
+/* Estilos para centrar el contenido */
+
+/*.container {
+    text-align: left;
+}
+
+.content {
+    margin-top: 110%;
+    margin-left: -120%;
+}
+
+input[type="text"] {
+    width: 330px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 30px;
+    margin-bottom: 10px;
+
+    font-family: "Handjet", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+label {
+    display: block;
+    font-size: 50px;
+
+    font-family: "Handjet", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #1F1347;
+}*/
+
+
+
+
+/*BOTON AYUDA*/
+/*.Ayuda {
+    position: relative;
+    cursor: pointer;
+    position: absolute;
+    bottom: 88%;
+    left: 92%;
+}
+
+.btn-ayuda {
+    background-color: transparent;
+    border: none;
+
+}
+
+.img-ayuda {
+    margin-left: 20px;
+    margin-block-start: 20px;
+    height: 70px;
+    transition: .3s;
+}
+
+
+.btn-ayuda:hover {
+    transform: scale(1.2);
+}*/
+
+
+/*botones*/
+
+/*.botones {
+    position: relative;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    margin-bottom: 1%;
+}
+
+.btn-salir {
+    background-color: transparent;
+    border: none;
+
+}
+
+.img-salir {
+    margin-left: 20px;
+    margin-block-start: 20px;
+    height: 90px;
+    transition: .3s;
+}
+
+
+
+.btn-salir:hover {
+    transform: scale(1.2);
+}*/
+
+/*VENTANA EMERGENTE(MODAL)   inicio de aplicacion*/
+
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    font-family: "Cherry Bomb One", system-ui;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 3vh;
+    color: white;
+}
+
+
+@keyframes wave {
+    0%, 40%, 100% { transform: translateY(0); }
+    20% { transform: translateY(-10px); }
+  }
+  
+  .wave {
+    display: inline-block;
+    animation: wave 1.5s infinite;
+  }
+
+.modalDialog.open {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    width:55vh;
+    position: relative;
+    margin: 30vh auto;
+    padding: 1vh; /* ajusta el espacio interno según sea necesario */
+    border-radius: 3vh;
+    background: -moz-linear-gradient(#da5543, #e9380c9c);
+    background: -webkit-linear-gradient(#da5543, #e9130c7a);
+    background: -o-linear-gradient(#da5543, #e9380c9c);
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+}
+
+.acceptButton {
+    display: block;
+    margin: 1vh auto 0; /* añade un margen superior */
+    padding: 1vh 1vh;
+    border: none;
+    border-radius: 1vh;
+    background-color: #da5543;
+    color: white;
+    font-size: 3vh;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: "Cherry Bomb One", system-ui;
+}
+
+.acceptButton:hover {
+    background-color: #b62828;
+}
+
+
+

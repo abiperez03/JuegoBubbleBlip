@@ -16,5 +16,3 @@ document.addEventListener('DOMContentLoaded', function () {
     animateText();
     setInterval(animateText, 4000); // Reinicia la animación cada 4 segundos
 });
-
-

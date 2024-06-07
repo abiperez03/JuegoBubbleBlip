@@ -1,0 +1,206 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+
+}
+
+/*BODY */
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 95vw; /* Ancho igual al 95% del ancho de la ventana */
+    height: 95vh; /* Alto igual al 95% del alto de la ventana */
+    background-image: url(/tools/backgroundimages/Modo_clasico.png);
+    background-repeat: no-repeat;
+    background-size: cover; /* Ajusta el tamaño de la imagen para que quepa dentro del body */
+    background-position: center; /* Centra la imagen en el body */
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+/*AJSUTES DE TAMAÑO DE PANTALLA*/
+
+/* Para pantallas de 600px o menos */
+@media (max-width: 600px) {
+    #main {
+      width: 100%; /* El contenido ocupa todo el ancho */
+    }
+    #sidebar {
+      display: none; /* Ocultar la barra lateral en pantallas pequeñas */
+    }
+  }
+  
+  /* Para pantallas de 600px a 900px */
+  @media (min-width: 600px) and (max-width: 900px) {
+    #main {
+      width: 70%; /* El contenido ocupa el 70% del ancho */
+    }
+    #sidebar {
+      display: block; /* Mostrar la barra lateral en pantallas medianas */
+    }
+  }
+  
+  /* Para pantallas de 900px o más */
+  @media (min-width: 900px) {
+    #main {
+      width: 60%; /* El contenido ocupa el 60% del ancho */
+    }
+    #sidebar {
+      width: 30%; /* La barra lateral ocupa el 30% del ancho */
+    }
+  }
+
+
+/* codigo de la barra y el corazon*/
+
+.corazon {
+    position: absolute;
+    top: 1%;
+    left: 1.5%;
+    height: 0px;
+    z-index: 1;
+   
+}
+
+.corazon img{
+     height: 8vh;
+}
+
+.progress {
+    position: absolute;
+    top: 3%;
+    left: 4%; /* Ajusta la distancia entre el corazón y la barra de progreso según sea necesario */
+    width: 45vh;
+    height: 5vh;
+    border: 0.5vh solid black;
+    border-style: solid;
+
+}
+
+.bar {
+    background: #A492AA;
+    height: 4vh;
+
+
+}
+
+.progress-value {
+    width: 100%;
+    height: 100%;
+    background: #74A050;
+}
+
+
+
+/*ICONO VOLUMEN*/
+#volumen img {
+   position: absolute;
+    left: 48%;
+    height: 9vh;
+}
+
+
+
+/*boton salir*/
+
+.botones {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10; /* Asegúrate de que los botones estén en el nivel superior */
+    cursor: pointer;
+}
+
+
+.btn-salir {
+    background-color: transparent;
+    border: none;
+}
+
+.img-salir {
+    margin-left: 3vh;
+    height: 16vh;
+    transition: .3s;
+    bottom: 3vh;
+}
+
+.btn-salir:hover {
+    transform: scale(1.2);
+}
+
+
+/*VENTANA EMERGENTE(MODAL)   inicio de aplicacion*/
+
+.modalDialog {
+    position: fixed;
+    font-family: "Cherry Bomb One", system-ui;
+    font-size: 3vh;
+    letter-spacing: .2vh;
+    color: #fff;
+    text-align: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+@keyframes wave {
+    0%, 40%, 100% { transform: translateY(0); }
+    20% { transform: translateY(-10px); }
+  }
+  
+  .wave {
+    display: inline-block;
+    animation: wave 1.5s infinite;
+  }
+
+.modalDialog.open {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    width: 60vh;
+    height: 45vh;
+    position: relative;
+    margin: 25vh auto;
+    border-radius: 5vh;
+    background: #fff;
+    background: -moz-linear-gradient(#cbe8f3, #26c7cd);
+    background: -webkit-linear-gradient(#cbe8f3, #26c7cd);
+    background: -o-linear-gradient(#cbe8f3, #26c7cd);
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+}
+
+.acceptButton {
+    display: block;
+    margin: 2vh auto 0; /* añade un margen superior */
+    padding: 1vh 2vh;
+    border: none;
+    border-radius: 1vh;
+    background-color: #0588b8a4;
+    color: white;
+    font-family: "Cherry Bomb One", system-ui;
+    font-size: 3vh;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.acceptButton:hover {
+    background-color: #30b5d6;
+}
+
+
+

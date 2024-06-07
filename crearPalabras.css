@@ -1,0 +1,628 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+body {
+    display: flexbox;
+    margin: 0 auto;
+    min-height: 100vh;
+    background-image: url(/tools/backgroundimages/CP2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*AJSUTES DE TAMAÑO DE PANTALLA*/
+
+/* Para pantallas de 600px o menos */
+@media (max-width: 600px) {
+    #main {
+        width: 100%;
+        /* El contenido ocupa todo el ancho */
+    }
+
+    #sidebar {
+        display: none;
+        /* Ocultar la barra lateral en pantallas pequeñas */
+    }
+}
+
+/* Para pantallas de 600px a 900px */
+@media (min-width: 600px) and (max-width: 900px) {
+    #main {
+        width: 70%;
+        /* El contenido ocupa el 70% del ancho */
+    }
+
+    #sidebar {
+        display: block;
+        /* Mostrar la barra lateral en pantallas medianas */
+    }
+}
+
+/* Para pantallas de 900px o más */
+@media (min-width: 900px) {
+    #main {
+        width: 60%;
+        /* El contenido ocupa el 60% del ancho */
+    }
+
+    #sidebar {
+        width: 30%;
+        /* La barra lateral ocupa el 30% del ancho */
+    }
+}
+
+/*PARTE SUPERIOR*/
+
+/*Div arriba*/
+
+.arriba {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+/*Titulo*/
+
+.titulo {
+    font-family: "Cherry Bomb One", system-ui;
+    font-size: 5vh;
+    color: rgb(15, 69, 150);
+    animation-iteration-count: infinite;
+    /* Repite la animación infinitamente */
+}
+
+/* animación caída general*/
+
+.titulo span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: drop 0.5s forwards;
+}
+
+/* animación letra por letra*/
+
+.titulo span.space {
+    text-align: center;
+    /* Ajusta este valor según la cantidad de espacio que desees entre palabras */
+}
+
+.titulo span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.titulo span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.titulo span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.titulo span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.titulo span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.titulo span:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.titulo span:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.titulo span:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+.titulo span:nth-child(9) {
+    animation-delay: 0.8s;
+}
+
+.titulo span:nth-child(10) {
+    animation-delay: 0.9s;
+}
+
+.titulo span:nth-child(11) {
+    animation-delay: 1s;
+}
+
+.titulo span:nth-child(12) {
+    animation-delay: 1.1s;
+}
+
+.titulo span:nth-child(13) {
+    animation-delay: 1.2s;
+}
+
+.titulo span:nth-child(14) {
+    animation-delay: 1.3s;
+}
+
+.titulo span:nth-child(15) {
+    animation-delay: 1.4s;
+}
+
+.titulo span:nth-child(16) {
+    animation-delay: 1.5s;
+}
+
+.titulo span:nth-child(17) {
+    animation-delay: 1.6s;
+}
+
+.titulo span:nth-child(18) {
+    animation-delay: 1.7s;
+}
+
+.titulo span:nth-child(19) {
+    animation-delay: 1.8s;
+}
+
+.titulo span:nth-child(20) {
+    animation-delay: 1.9s;
+}
+
+.titulo span:nth-child(21) {
+    animation-delay: 2s;
+}
+
+.titulo span:nth-child(22) {
+    animation-delay: 2.1s;
+}
+
+.titulo span:nth-child(23) {
+    animation-delay: 2.2s;
+}
+
+.titulo span:nth-child(24) {
+    animation-delay: 2.3s;
+}
+
+.titulo span:nth-child(25) {
+    animation-delay: 2.4s;
+}
+
+@keyframes drop {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*Nombre del grupo de palabras*/
+
+/*Texto nombre del grupo de palabras*/
+
+.nombre-gp {
+    color: #fff;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3vh;
+    margin-left: 4vh;
+    font-family: "Handjet", sans-serif;
+    font-size: 4vh;
+
+}
+
+/*Input nombre del grupo de palabras*/
+
+.nombre {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    border: none;
+    border-radius: 1vh;
+    width: 40vh;
+    height: 6.5vh;
+    margin-top: 0.5vh;
+    margin-left: 1vh;
+    font-size: 3vh;
+
+    font-family: "Handjet", sans-serif;
+}
+
+
+/*PARTE CENTRAL*/
+
+/*Div palabras*/
+
+.palabras {
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2vh;
+}
+
+/*Divs idiomas*/
+
+.espanol {
+    position: relative;
+    margin-top: 4vh;
+    margin-left: 5vh;
+    margin-right: 5vh;
+}
+
+.ingles {
+    margin-top: 4vh;
+    margin-left: 15vh;
+    margin-right: 5vh;
+}
+
+/*Textos*/
+
+.text-esp {
+    text-align: center;
+    margin-left: -16vh;
+    font-family: "Handjet", sans-serif;
+    font-size: 6vh;
+    letter-spacing: .5vh;
+}
+
+.text-ing {
+    text-align: center;
+    margin-right: 20vh;
+    font-family: "Handjet", sans-serif;
+    font-size: 6vh;
+    letter-spacing: .5vh;
+}
+
+/*Inputs*/
+
+/*Inputs*/
+.input-esp,
+.input-ing {
+    width: 50vh;
+    height: 5.5vh;
+    margin-top: 1vh;
+    border: none;
+    border-radius: 1vh;
+    background-color: #fff;
+    font-size: 3vh;
+    font-family: "Handjet", sans-serif;
+}
+
+/*Botones agregar*/
+.add-esp,
+.add-ing {
+    cursor: pointer;
+    width: 15vh;
+    height: 6vh;
+    border: none;
+    border-radius: 2vh;
+    background-color: #fff;
+    font-family: "Handjet", sans-serif;
+    font-size: 4.3vh;
+}
+
+/*Tablas*/
+.tablas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2vh;
+    gap: 40vh;
+    /* Añade espacio entre las tablas */
+}
+
+/*Tabla español*/
+.tabla-esp {
+    text-align: center;
+    font-family: "Handjet", sans-serif;
+    margin-right: 1vh;
+}
+
+/*Tabla inglés*/
+.tabla-ing {
+    text-align: center;
+    font-family: "Handjet", sans-serif;
+    margin-right: 15vh;
+    margin-left: 8vh;
+}
+
+/*Diseño tablas*/
+td,
+th {
+    border: 4px solid #000000fe;
+    padding: .5vh 2vh;
+    font-size: 3.5vh;
+}
+
+th {
+    background-color: #D8F8FF;
+    color: #000;
+}
+
+.tabla-contenedor {
+    height: 250px;
+    /* Ajusta esta altura según tus necesidades */
+    overflow-y: auto;
+}
+
+.tabla-contenedor table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #000;
+}
+
+.tabla-contenedor th,
+.tabla-contenedor td {
+    border: 3px solid #2288bb;
+    padding: 8px;
+}
+
+/* Estilo para los botones de borrar */
+table button {
+    cursor: pointer;
+    border: none;
+    border-radius: 2vh;
+    background-color: #fffefe;
+    color: #000000;
+    font-family: "Handjet", sans-serif;
+    font-size: 3vh;
+    padding: 0.5vh 1vh;
+}
+
+
+
+/*PARTE INFERIOR*/
+
+/*Div botones*/
+
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+/*Boton atras*/
+
+.atras {
+    position: relative;
+    height: 15vh;
+    width: 15vh;
+    margin-top: 7vh;
+    margin-left: 5vh;
+    background-color: transparent;
+    background-size: 15vh;
+    border: none;
+    cursor: pointer;
+}
+
+/*Animación boton atras*/
+
+.boton-atras:hover {
+    transform: scale(1.2);
+}
+
+.img-salir {
+    height: 15vh;
+}
+
+/*Boton play*/
+
+.play {
+    position: relative;
+    height: 15vh;
+    width: 15vh;
+    margin-top: 7vh;
+    margin-right: 5vh;
+    background-color: transparent;
+
+    background-image: url(/tools/Imgbotones/btnPlay.png);
+
+    background-size: 15vh;
+    border: none;
+    cursor: pointer;
+}
+
+/*Animación boton play*/
+
+.boton-play:hover {
+    transform: scale(1.2);
+}
+
+/*VENTANA EMERGENTE*/
+
+.modalDialog {
+    position: fixed;
+    font-family: "Cherry Bomb One", system-ui;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(198, 225, 21, 0);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    font-family: "Cherry Bomb One", system-ui;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 4vh;
+    color: white;
+}
+
+@keyframes wave {
+
+    0%,
+    40%,
+    100% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(-10px);
+    }
+}
+
+.wave {
+    display: inline-block;
+    animation: wave 1.5s infinite;
+}
+
+
+.modalDialog.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalDialog>div {
+    width: 70vh;
+    position: relative;
+    margin: 20vh auto;
+    padding: 2vh;
+    /* ajusta el espacio interno según sea necesario */
+    border-radius: 5vh;
+    background: #fff;
+    background: -moz-linear-gradient(#a8e4fa, #26c7cd);
+    background: -webkit-linear-gradient(#a8e4fa, #26c7cd);
+    background: -o-linear-gradient(#a8e4fa, #26c7cd);
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+
+}
+
+.acceptButton {
+    display: block;
+    margin: 2vh auto 0;
+    /* añade un margen superior */
+    padding: 1.5vh 3vh;
+    border: none;
+    border-radius: 1vh;
+    background-color: #a8e4fa;
+    color: white;
+    font-size: 4vh;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: "Cherry Bomb One", system-ui;
+}
+
+.acceptButton:hover {
+    background-color: #30b5d6;
+}
+
+
+
+/* MODAL PARA GUARDAR LAS PALABRAS*/
+
+
+/* Estilos para el modal */
+.modalsaveword {
+    display: none;
+    /* Ocultar el modal por defecto */
+    position: fixed;
+    /* Fijar el modal en la pantalla */
+    z-index: 1;
+    /* Colocar el modal encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Ancho completo */
+    height: 100vh;
+    /* Alto completo */
+    overflow: auto;
+    /* Habilitar el desplazamiento si es necesario */
+    background-color: rgb(0, 0, 0);
+    /* Color de fondo negro */
+    background-color: rgba(27, 17, 17, 0.4);
+    /* Con opacidad */
+    font-family: "Cherry Bomb One", system-ui;
+    font-size: 3vh;
+    letter-spacing: 0.2vh;
+    color: rgb(15, 69, 150);
+}
+
+.modalsaveword-content {
+    background-color: #a8e4fa;
+    margin: 15vh auto;
+    /* Centrar verticalmente el modal */
+    padding: 5vh;
+    border: 1px solid #888;
+    width: 50vh;
+    /* Ancho del contenido del modal */
+}
+
+
+
+.close:hover,
+.close:focus {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Estilos para los botones */
+#saveModalBtn,
+#playModalBtn {
+    margin: 2vh auto;
+    /* Centrar verticalmente el modal */
+    border: none;
+    padding: 3vh 5vh;
+    color: white;
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 2vh;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-radius: 5.5vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos específicos para el botón de "Guardar" */
+#saveModalBtn {
+    background-color: #008CBA;
+    font-family: "Handjet", sans-serif;
+    font-size: 3vh;
+}
+
+#saveModalBtn:hover {
+    transform: scale(1.08);
+}
+
+/* Estilos específicos para el botón de "Jugar" */
+
+#playModalBtn {
+    background-color: #f44336;
+    font-family: "Handjet", sans-serif;
+    font-size: 3vh;
+}
+
+#playModalBtn:hover {
+
+    transform: scale(1.08);
+}
+
+.sugerencia {
+    color: #fff;
+    margin-top: -10vh;
+    /* Posiciona el elemento un 40% hacia abajo */
+    font-size: 4vh;
+    font-family: "Handjet", sans-serif;
+    text-align: center;
+    /* Centra el texto horizontalmente */
+    z-index: 999;
+    /* Ajusta este valor según sea necesario */
+}
