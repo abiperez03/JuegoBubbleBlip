@@ -1,0 +1,26 @@
+# NetBeans specific #
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+/.nb-gradle/
+/.nb-gradle-build/
+/.idea/
+
+
+
+# Class Files #
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Maven specific
+/target/
+/.mvn/
+

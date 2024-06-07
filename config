@@ -1,0 +1,9 @@
+[core]
+	symlinks = false
+	repositoryformatversion = 0
+	filemode = false
+	logallrefupdates = true
+	bare = false
+[remote "origin"]
+	url = https://github.com/Emmlg/Bubble-Blip_WEB.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
